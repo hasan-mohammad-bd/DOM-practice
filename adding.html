@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding-element</title>
+</head>
+<body>
+    <div class="container">
+        <div id="blogs">
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo neque, harum vitae quibusdam quis pariatur porro impedit quia sunt animi?</p>
+            </section>
+            <section>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias repellendus iusto blanditiis totam eius asperiores. Aliquid numquam obcaecati culpa cumque.</p>
+            </section>
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nemo autem expedita eum ducimus velit, fuga voluptate sit porro minima.</p>
+            </section>
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo aperiam earum corporis illum, incidunt quae laborum consequatur ducimus tempore aliquam?</p>
+            </section>
+
+        </div>
+        <section>
+            <textarea name="" id="input" cols="30" rows="10"></textarea> <br>
+            <button id="post-btn">Post</button>
+        </section>
+    </div>
+    <script>
+        document.getElementById("post-btn").addEventListener("click", function(){
+        const newBlog = document.createElement('section');
+        const newPara = document.createElement('p');
+        newBlog.appendChild(newPara);
+        const blogs = document.getElementById("blogs");
+        const inputText = document.getElementById("input");
+        newPara.innerHTML = inputText.value;
+        blogs.appendChild(newBlog);
+        inputText.value = "";
+            
+        })
+
+
+
+
+    </script>
+        
+</body>
+</html>
